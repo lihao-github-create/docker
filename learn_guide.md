@@ -39,6 +39,8 @@ Container
 
 # 2. 第一阶段：只学 10 个命令
 
+学习笔记：[第二部分学习总结：Docker 基础命令与容器生命周期](doc/02-docker-basic-commands.md)。
+
 先不要背几十个 Docker 命令。
 
 掌握下面这些就够了：
