@@ -116,6 +116,8 @@ image != container
 
 # 3. 第二阶段：重点理解 docker run
 
+学习笔记：[第三部分学习总结：重点理解 docker run](doc/03-docker-run.md)。
+
 Docker 学习中最值得深入理解的命令其实就是：
 
 ```bash
@@ -176,6 +178,8 @@ docker exec -it nginx sh
 
 # 4. 第三个重点：端口映射
 
+学习笔记：[第四部分学习总结：端口映射](doc/04-docker-port-mapping.md)。
+
 例如运行 nginx：
 
 ```bash
@@ -223,6 +227,8 @@ nginx
 ---
 
 # 5. 第四个重点：Volume
+
+学习笔记：[第五部分学习总结：Volume 与绑定挂载](doc/05-docker-volumes-and-bind-mounts.md)。
 
 这个尤其重要。
 
