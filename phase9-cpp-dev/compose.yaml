@@ -1,0 +1,11 @@
+services:
+  dev:
+    image: cpp-dev:cmake
+    build: .
+    user: "${DEV_UID}:${DEV_GID}"
+    volumes:
+      - ".:/workspace"
+    command:
+      - bash
+      - -c
+      - cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug && cmake --build build && ./build/cpp_demo

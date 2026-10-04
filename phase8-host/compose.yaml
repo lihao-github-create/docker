@@ -1,0 +1,23 @@
+services:
+  redis-host:
+    image: redis:7
+    network_mode: host
+    command:
+      - redis-server
+      - --bind
+      - 127.0.0.1
+      - --port
+      - "6381"
+    healthcheck:
+      test: ["CMD", "redis-cli", "-p", "6381", "ping"]
+      interval: 2s
+      timeout: 1s
+      retries: 5
+
+  client:
+    image: redis:7
+    network_mode: host
+    command: ["redis-cli", "-h", "127.0.0.1", "-p", "6381", "ping"]
+    depends_on:
+      redis-host:
+        condition: service_healthy

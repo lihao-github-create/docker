@@ -527,6 +527,8 @@ container IP
 
 # 10. 你非常值得额外学：host 网络
 
+学习笔记：[第九部分学习总结：host 网络与共享宿主机网络](doc/09-docker-host-network.md)。
+
 Linux 上：
 
 ```bash
@@ -608,6 +610,8 @@ cpp-demo/
 
 用 Docker 编译你的 C++ 项目。
 
+本次实验总结见 [C++、CMake 与 Docker 开发环境](doc/10-cpp-docker-development.md)，涵盖绑定挂载、UID/GID、增量构建，以及 Compose 开发流程。练习目录为 `phase9-cpp-dev/`。
+
 4. **Docker Compose**
 
 跑：
@@ -628,16 +632,18 @@ depends_on
 
 5. **ROS2 Docker**
 
-例如：
+本次实验总结见 [ROS2 Docker 多容器通信](doc/11-ros2-docker.md)，涵盖 DDS 发现、Domain ID 对照实验、Compose 外部网络和节点、话题、QoS 查询。练习配置为 `phase10-ros2/compose.yaml`。
+
+使用包含演示节点的镜像，例如：
 
 ```dockerfile
-FROM ros:humble
+FROM osrf/ros:humble-desktop
 ```
 
 然后：
 
 ```bash
-docker run -it ros:humble
+docker run -it osrf/ros:humble-desktop
 ```
 
 运行：

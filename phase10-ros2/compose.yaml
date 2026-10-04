@@ -1,0 +1,21 @@
+services:
+  talker:
+    image: osrf/ros:humble-desktop
+    environment:
+      ROS_DOMAIN_ID: "42"
+    command: ["ros2", "run", "demo_nodes_cpp", "talker"]
+    networks:
+      - ros2_lab
+
+  listener:
+    image: osrf/ros:humble-desktop
+    environment:
+      ROS_DOMAIN_ID: "42"
+    command: ["ros2", "run", "demo_nodes_cpp", "listener"]
+    networks:
+      - ros2_lab
+
+networks:
+  ros2_lab:
+    external: true
+    name: ros2_lab
