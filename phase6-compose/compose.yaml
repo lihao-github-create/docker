@@ -1,0 +1,37 @@
+services:
+  web:
+    image: nginx:stable
+    ports:
+      - "8083:80"
+    volumes:
+      - "../nginx-html:/usr/share/nginx/html:ro"
+
+  redis:
+    image: redis:7
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 2s
+      timeout: 1s
+      retries: 5
+
+  client:
+    image: redis:7
+    command: ["redis-cli", "-h", "redis", "GET", "lesson"]
+    depends_on:
+      redis:
+        condition: service_healthy
+
+  hello:
+    image: cpp-hello:compose
+    build:
+      context: ../phase5-dockerfile
+      args:
+        DEFAULT_GREETING: "Hi"
+    environment:
+      GREETING: "你好"
+    command: ["LiHao"]
+
+volumes:
+  redis_data:

@@ -309,6 +309,8 @@ Docker Ubuntu
 
 # 6. 第五阶段：Dockerfile
 
+学习笔记：[第六部分学习总结：Dockerfile 与 C++ 镜像构建](doc/06-dockerfile.md)。
+
 等你会 `docker run` 后，立即开始 Dockerfile。
 
 例如创建：
@@ -402,6 +404,8 @@ Layer 5 rebuild
 ---
 
 # 8. 第六阶段：Docker Compose
+
+学习笔记：[第七部分学习总结：Docker Compose 与多服务管理](doc/07-docker-compose.md)。
 
 等 Dockerfile 学完，就学 Compose。
 
