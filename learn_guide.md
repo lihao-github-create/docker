@@ -472,6 +472,8 @@ compose.yaml
 
 # 9. Docker 网络只需要先理解这个层次
 
+学习笔记：[第八部分学习总结：Docker 桥接网络、服务发现与通信隔离](doc/08-docker-networks.md)。
+
 Docker 默认会给容器创建虚拟网络。
 
 比如：

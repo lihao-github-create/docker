@@ -1,0 +1,18 @@
+services:
+  redis:
+    image: redis:7
+    networks:
+      - backend
+
+  client:
+    image: redis:7
+    command: ["sleep", "infinity"]
+    networks:
+      - frontend
+      - backend
+
+networks:
+  frontend:
+    driver: bridge
+  backend:
+    driver: bridge
