@@ -252,7 +252,7 @@ echo "hello docker" > test_data/test.txt
 
 ```bash
 docker run -it \
-  -v $(pwd)/test_data:/data \
+  -v "$(pwd)/test_data:/data" \
   ubuntu:22.04 \
   bash
 ```
