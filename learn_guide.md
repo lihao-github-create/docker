@@ -1,5 +1,19 @@
 如果你的目标是**快速达到“能用 Docker 做开发、部署、调试”**，不需要一开始把所有底层原理学完。建议用“20% 概念 + 80% 动手”的方式，按下面这条路线走。
 
+# 0. 准备阶段：安装 Docker 环境
+
+安装教程：[第零部分学习总结：安装 Docker 环境](doc/00-docker-environment-installation.md)。
+
+教程分别说明 Ubuntu、Windows（Docker Desktop + WSL 2）和 macOS 的安装方法，并包含权限配置、Docker Engine、Buildx、Compose 验证以及常见故障排查。安装完成后，先确认以下命令能够正常执行：
+
+```bash
+docker version
+docker compose version
+docker run --rm hello-world
+```
+
+---
+
 ## 1. 先建立 Docker 的核心认知
 
 学习笔记：[第一部分学习总结：Docker 的核心认知](doc/01-docker-core-concepts.md)。
